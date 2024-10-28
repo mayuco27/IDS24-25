@@ -1,0 +1,39 @@
+<<Data File Coluumn Cleaning (Cleaned_data <- Original_data)>>
+
+1. adj <- AdjudicationsQ12023 
+
+Predominant function of establishment - renamed as 'Security'
+Adjudicator - removed missing values
+Ethnicity - removed "d Other ethnic group"
+          - removed first two letters (i.e., a "a Asian or Asian British"　→　"Asian or Asian British")
+Religion - removed "g Other religious groups"
+         - removed first two letters
+
+2. case <- CaseloadQ12023
+ORDER TYPE - removed "Other sentences"
+
+3. puni <- PunishmentsQ12023
+
+Predominant function of establishment - renamed as 'Security'
+Adjudicator - a lot of missing values ---> remove 
+Ethnicity - other ethnic group ----> 700 missing / 37000 --> remove  
+Religion - other religion ----> 700 missing / 37000 --> remove 
+Ethnicity and Religion - a,b,c ... etc prefixes ---> remove 
+
+Offence - removed "Other offences"
+Punishment - remoced "Others"
+No of days - renamed to No_of_days
+           - mutated "." to "0"
+
+ 4. start <- StartsQ12023
+REGION - removed "Others"
+ORDER TYPES - removed "Other sentences"
+ 
+ 5. term <- TerminationsQ12023
+REGION - removed "Others"
+REASON - removed "Terminated early for other reasons"
+COUNT - removed "c"
+
+Question Ideas - 
+
+Possibly look at age ????
